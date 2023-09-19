@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<%!
+	// "<%! %>" 사용시, 전역변수 취급
+	private String str1 = "선언문";
+	private String getStr() {
+		str1 += " 테스트입니다.";
+		return str1;
+	}
+%>
+
+<%
+	String str2 = 
+%>
+</head>
+<body>
+
+</body>
+</html>

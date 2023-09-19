@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JspProject/src/main/webapp/memRef.html&apos; to &apos;memReg.html&apos;" description="Rename resource &apos;memRef.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/memRef.html" name="memReg.html" stamp="1695100518466" updateReferences="true"/>
+</session>
