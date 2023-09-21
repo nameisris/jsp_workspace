@@ -29,7 +29,14 @@ public class MemRegProcess extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+		// Request 자체를 memRegSuccess.jsp에 위임
+		// getRequestDispatcher()는 인자값으로 이동할 페이지의 경로를 지정
+		// 해당 경로를 RequestDispatcher 객체에 줌
 		RequestDispatcher dispatcher = request.getRequestDispatcher("memRegSuccess.jsp");
+		
+		// 페이지를 이동시키는 forward() 메서드
+		// 현재 페이지이서 사용하던 HttpServletRequest, HttpServletResponse 객체를 인자값으로 전달
+		// 즉, 내장 객체인 request와 response를 넘겨줌
 		dispatcher.forward(request, response);
 	}
 	
@@ -45,7 +52,7 @@ public class MemRegProcess extends HttpServlet {
 		
 		// 주소창에 찍는건 무조건 GET 방식 요청
 		// memReg로 요청하지만,
-		// memReg로 redirect
+		// memReg.html로 redirect
 		// sendRedirect는 url이 바뀜 (memReg를 주소창에 찍으면 memReg.html로)
 		// sendRedirect 안의 링크로 다시 요청하는 방식이기에 url이 바뀜
 		response.sendRedirect("memReg.html");

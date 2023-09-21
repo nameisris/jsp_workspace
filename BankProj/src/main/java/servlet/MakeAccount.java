@@ -36,11 +36,13 @@ public class MakeAccount extends HttpServlet {
 		// 계좌 계설 페이지에서 넣은 값에 대해
 		// '계좌 개설' 버튼을 제출이 일어날 경우
 		// 값 다 넣어줌
+		// 특정 "id"의 value를 가져옴
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		Integer money = Integer.parseInt(request.getParameter("money"));
 		String type = request.getParameter("type");
 		String grade = request.getParameter("grade");
+		if(grade == null) grade = "";
 		
 		// Account 객체로 값 넣어줌
 		Account acc = new Account(id, name, money, type, grade);

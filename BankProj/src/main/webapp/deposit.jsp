@@ -45,20 +45,20 @@
 <body>
     <center>
         <div class="header">
-            <h3>ì ê¸</h3>
+            <h3>입 금</h3>
         </div>
         <div class="container" id='deposit'>
             <form id='form' action="deposit" method="post">
                 <div class="row">
-                    <div class="title">ê³ì¢ë²í¸</div>
+                    <div class="title">계좌번호</div>
                     <div class="input"><input type="text" name="id"></div>
                 </div>
                 <div class="row">
-                    <div class="title">ìê¸ì¡</div>
+                    <div class="title">입금액</div>
                     <div class="input"><input type="text" name="money"></div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="ì ê¸">
+                    <input type="submit" value="입 금">
                 </div>
             </form>
         </div>
