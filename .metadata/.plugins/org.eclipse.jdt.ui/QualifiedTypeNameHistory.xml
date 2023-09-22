@@ -4,6 +4,6 @@
     <fullyQualifiedTypeName name="dto.Account"/>
     <fullyQualifiedTypeName name="java.util.Enumeration"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="dto.Member"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="dto.Member"/>
 </qualifiedTypeNameHistroy>

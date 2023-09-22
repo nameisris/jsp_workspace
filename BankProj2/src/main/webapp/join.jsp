@@ -49,7 +49,7 @@
             <h3>회원가입</h3>
         </div>
         <div class="container" id='query'>
-            <form action="join" method="post" id='form'>
+            <form id='form' action="join" method="post">
                 <div class="row">
                     <div class="title">아이디</div>
                     <div class="input"><input type="text" name="id"></div>

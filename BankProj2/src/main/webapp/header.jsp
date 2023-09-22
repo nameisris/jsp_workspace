@@ -23,7 +23,7 @@ a { text-decoration: none; }
       <a href="accountinfoform">계좌조회</a>&nbsp;&nbsp;
       <a href="allaccountinfo">전체계좌조회</a>&nbsp;&nbsp;
    </div>
-   <div style="text-align:right; margin-right: 10px;">
+   <div style="float:right; margin-right: 10px;">
    	  <% if(id == null) { %>
           <a href="login">로그인</a>&nbsp;&nbsp;
       <%} else { %>

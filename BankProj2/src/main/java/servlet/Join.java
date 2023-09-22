@@ -28,24 +28,29 @@ public class Join extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("join.jsp");
 		dispatcher.forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-request.setCharacterEncoding("utf-8");
+		request.setCharacterEncoding("utf-8");
 		
+		// request로부터 값을 읽어옴
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		String address = request.getParameter("address");
 		
+		// 파라미터로 가져온 값으로 Member 객체 생성
 		Member member = new Member(id, name, password, email, address);
 		
+		// 생성된 객체를 session에 넣음
 		HttpSession session = request.getSession();
 		session.setAttribute("member", member);
 		
+		// login.jsp로 포워딩
 		RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
 		dispatcher.forward(request, response);
 	}
