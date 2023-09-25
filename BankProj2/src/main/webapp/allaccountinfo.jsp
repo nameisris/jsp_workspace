@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.List" %>
+    <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>  
+<%-- <%@ page import="java.util.List" %>    
 <%@ page import="dto.Account" %>
+    
 <%
-	List<Account> accs = (List<Account>)request.getAttribute("accs");
- %>
+   List<Account> accs = (List<Account>)request.getAttribute("accs");
+%> --%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,42 +53,37 @@
     </style>
 </head>
 <body>
-<% pageContext.include("header.jsp"); %>
-    <center>
-        <form>
-            <div class="header">
-                <h3>전체계좌조회</h3>
+<% pageContext.include("header.jsp");%>
+<center>
+	<form>
+		<div class="header">
+        	<h3>전체 계좌 조회</h3>
+        </div>
+        <div class="container" id="container">
+        	<div class="row">
+        		<div class="title colume">순서</div>
+                <div class="title colume">계좌번호</div>
+                <div class="title colume">이름</div>
+                <div class="title colume">잔액</div>
+                <div class="title colume">계좌종류</div>
+                <div class="title colume">등급</div>
             </div>
-            <div class="container" id="container">
-                <div class="row">
-                    <div class="title colume">순서</div>
-                    <div class="title colume">계좌번호</div>
-                    <div class="title colume">이름</div>
-                    <div class="title colume">잔액</div>
-                    <div class="title colume">계좌종류</div>
-                    <div class="title colume">등급</div>
-                </div>
                 
-                <div>
-	                <%
-	                	for(int i = 0;i < accs.size();i++) {
-	                %>
-	               		<div class="row">
-		               		<div class="colume"><%=i + 1 %></div>
-		                    <div class="colume"><%=accs.get(i).getId()%></div>
-		                    <div class="colume"><%=accs.get(i).getName()%></div>
-		                    <div class="colume"><%=accs.get(i).getBalance()%></div>
-		                    <div class="colume"><%=accs.get(i).getType()%></div>
-		                    <div class="colume"><%=accs.get(i).getGrade()%>&nbsp;</div>
-		                </div>
-	                    
-	                <%
-	                	}
-	                %>
-                </div>
-                
-            </div>
-        </form>
-    </center>
+            <c:set var="i" value="1"/>
+            <c:forEach var="acc" items="${accs}"> 
+            <%--   //items="${"accs}는 servlet에 있는 키 값이랑 이름이 똑같다  --%>
+            <div class="row">
+            	<div class="colume">${i}</div>
+                    <div class="colume">${acc.id}</div>
+                    <div class="colume">${acc.name}</div>
+                    <div class="colume">${acc.balance}</div>
+                    <div class="colume">${acc.type}</div>
+                    <div class="colume">${acc.grade}&nbsp;</div>
+                    <c:set var="i" value="${i+1}"/>
+            	</div>
+			</c:forEach>
+		</div>
+	</form>
+</center>
 </body>
 </html>

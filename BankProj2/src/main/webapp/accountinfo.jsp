@@ -4,6 +4,7 @@
 <%
 	Account acc = (Account) request.getAttribute("acc");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,28 +55,26 @@
         </div>
 
         <div class="container" id='result'>
-        	<form id='form' action="accountinfo" method="post">
-	            <div class="row">
-	                <div class="title">계좌번호</div>
-	                <div class="input"><input type="text" name="id" id='id' disabled value=<%=acc.getId() %>></div>
-	            </div>
-	            <div class="row">
-	                <div class="title">이름</div>
-	                <div class="input"><input type="text" name="name" id='name' disabled value=<%=acc.getName() %>></div>
-	            </div>
-	            <div class="row">
-	                <div class="title">입금액</div>
-	                <div class="input"><input type="text" name="money" id='money' disabled value=<%=acc.getBalance() %>></div>
-	            </div>
-	            <div class="row">
-	                <div class="title">종류</div>
-	                <div class="input"><input type="text" name="type" id='type' disabled value=<%=acc.getType() %>></div>
-	            </div>
-	            <div class="row">
-	                <div class="title">등급</div>
-	                <div class="input"><input type="text" name="grade" id='grade' disabled value=<%=acc.getGrade() %>></div>
-	            </div>
-	        </form>
+	    	<div class="row">
+	            <div class="title">계좌번호</div>
+	            <div class="input"><input type="text" name="id" id='id' disabled value="${acc.id }"></div>
+	        </div>
+	        <div class="row">
+	            <div class="title">이름</div>
+	            <div class="input"><input type="text" name="name" id='name' disabled value="${acc.name }"></div>
+	        </div>
+	        <div class="row">
+	            <div class="title">입금액</div>
+	            <div class="input"><input type="text" name="money" id='money' disabled value="${acc.balance }"></div>
+	        </div>
+	        <div class="row">
+	            <div class="title">종류</div>
+	            <div class="input"><input type="text" name="type" id='type' disabled value="${acc.type }"></div>
+	        </div>
+	        <div class="row">
+	            <div class="title">등급</div>
+	            <div class="input"><input type="text" name="grade" id='grade' disabled value="${acc.grade }"></div>
+	        </div>
         </div>
     </center>
 </body>

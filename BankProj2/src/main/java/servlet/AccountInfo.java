@@ -37,7 +37,7 @@ public class AccountInfo extends HttpServlet {
 			request.setAttribute("err", "로그인 하세요.");
 			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("accountinfo.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("accountinfoform.jsp");
 		dispatcher.forward(request, response);
 	}
 

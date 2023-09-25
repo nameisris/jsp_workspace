@@ -7,6 +7,8 @@ C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\30746
 \Hello\src\main\java
 C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\948146744.index
 \JspExam\src\main\java
+C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2613018504.index
+\DBExam\src\main\java
 C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\460581531.index
 \JspExam6\src\main\java
 C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1403570784.index
@@ -17,3 +19,7 @@ C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\63319
 \BankProj2\src\main\java
 C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3996145768.index
 \BankProj\src\main\java
+C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3723614542.index
+\JspExam9\src\main\java
+C:\ris\jsp_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2379144880.index
+\JspExam9\src\main\java

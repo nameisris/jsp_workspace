@@ -67,7 +67,7 @@ public class MakeAccount extends HttpServlet {
 		request.setAttribute("acc", acc);
 		
 		// 6. accountinfo.jsp로 포워드
-		RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("accountinfo.jsp");
 		dispatcher.forward(request, response);
 		
 		// sendRedirect
