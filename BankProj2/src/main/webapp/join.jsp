@@ -55,6 +55,10 @@
                     <div class="input"><input type="text" name="id"></div>
                 </div>
                 <div class="row">
+                    <div class="title">아이디</div>
+                    <div class="input"><input type="text" name="id"></div>
+                </div>
+                <div class="row">
                     <div class="title">비밀번호</div>
                     <div class="input"><input type="password" name="password"></div>
                 </div>
