@@ -18,6 +18,10 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public Member login(String id, String password) throws Exception {
-		return memberDao.selectMember(id, password);
+		Member member = memberDao.selectMember(id, password);
+		if(member==null) throw new Exception("아이디가 틀립니다.");
+		if(!member.getPassword().equals(password)) throw new Exception("비밀번호가 틀립니다.");
+		
+		return member;
 	}
 }
