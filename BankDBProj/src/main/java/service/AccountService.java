@@ -29,10 +29,16 @@ public class AccountService {
 	}
 	
 	public void deposit(String id, Integer money) throws Exception {
+		Account acc = dao.selectAccount(id);
+		if(id==null) throw new Exception("해당되는 계좌가 없습니다.");
+		
 		dao.updateAccount(id, money);
 	}
 	
 	public void withdraw(String id, Integer money) throws Exception {
-		dao.updateAccount(id, -money);
+		Account acc = dao.selectAccount(id);
+		if(id==null) throw new Exception("해당되는 계좌가 없습니다.");
+		
+		dao.updateAccount(id, money);
 	}
 }

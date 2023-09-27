@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="\\s"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="acocunt"/>
 			<item value="Response code: 200"/>
 			<item value="^\R"/>
 		</list>

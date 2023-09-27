@@ -17,16 +17,22 @@ public class Account {
 		this.grade = grade;
 	}
 	
-	public void deposit(Integer money) {
+	public boolean deposit(Integer money) {
 		if(money > 0) {
 			balance += money;
+			return true;
 		}
+		
+		return false;
 	}
 	
-	public void withdraw(Integer money) {
+	public boolean withdraw(Integer money) {
 		if(balance >= money) {
 			balance -= money;
+			return true;
 		}
+		
+		return false;
 	}
 	
 	public String getId() {

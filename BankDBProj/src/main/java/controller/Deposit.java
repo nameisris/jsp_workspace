@@ -45,17 +45,16 @@ public class Deposit extends HttpServlet {
 		
 		try {
 			acc = accountService.selectAccount(id);
-			acc.deposit(money);
+			if(!(acc.deposit(money))) throw new Exception("0원 이상 입금해주세요.");
 			accountService.deposit(id, acc.getBalance());
-			request.setAttribute("id", id);
+			
+			request.setAttribute("acc", acc);
 			request.getRequestDispatcher("accountinfo.jsp").forward(request, response);;
 		} catch(Exception e) {
 			request.setAttribute("err", e.getMessage());;
 			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
-		
-		
-		
+
 	}
 
 }

@@ -15,4 +15,16 @@
     <fullyQualifiedTypeName name="dto.JdbcUtil"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="dto.Member"/>
+    <fullyQualifiedTypeName name="javax.annotation.Resources"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
+    <fullyQualifiedTypeName name="dao.AccountDAOImpl"/>
+    <fullyQualifiedTypeName name="bean.Account"/>
+    <fullyQualifiedTypeName name="service.AccountService"/>
+    <fullyQualifiedTypeName name="util.MybatisSqlSessionFactory"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicRadioButtonMenuItemUI"/>
+    <fullyQualifiedTypeName name="dao.MemberDAOImpl"/>
+    <fullyQualifiedTypeName name="service.MemberService"/>
+    <fullyQualifiedTypeName name="service.MemberServiceImpl"/>
+    <fullyQualifiedTypeName name="bean.Member"/>
 </qualifiedTypeNameHistroy>

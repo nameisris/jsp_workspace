@@ -48,6 +48,7 @@ public class AccountInfo extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
 		Account acc = null;
+		
 		AccountService accountService = new AccountService();
 		try {
 			acc = accountService.selectAccount(id);
