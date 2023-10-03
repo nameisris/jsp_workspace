@@ -17,7 +17,6 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public Member selectMember(String id, String password) throws Exception {
 		Member member = sqlSession.selectOne("mapper.member.selectMember", id);
-		System.out.println(member.getId());
 		return member;
 	}
 }

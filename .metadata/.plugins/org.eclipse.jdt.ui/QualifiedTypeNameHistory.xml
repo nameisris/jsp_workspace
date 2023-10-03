@@ -27,4 +27,5 @@
     <fullyQualifiedTypeName name="service.MemberService"/>
     <fullyQualifiedTypeName name="service.MemberServiceImpl"/>
     <fullyQualifiedTypeName name="bean.Member"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

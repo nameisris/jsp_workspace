@@ -20,7 +20,6 @@ public class AccountDAOImpl implements AccountDAO {
 	public Account selectAccount(String id) throws Exception {
 		// mapper.account인 Account.xml에서 id가 selectAccount <select> 태그
 		Account acc = sqlSession.selectOne("mapper.account.selectAccount", id);
-		System.out.println(acc.getId());
 		return acc;
 	}
 	
