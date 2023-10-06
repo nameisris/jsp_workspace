@@ -14,7 +14,7 @@
         .container {
             padding: 10px;
             border: 1px solid;
-            width: 280px;
+            width: 300px;
         }
 
         .header {
@@ -41,6 +41,44 @@
             background-color: lightgrey;
         }
     </style>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let isIdCheck = false; // 중복 체크 확인 여부 변수 (중복 체크를 성공했다면 true로 변경)
+		$("#idcheck").click(function() {
+			$.ajax({
+				url : "idcheck",
+				type : "post",
+				data : {id:$("#id").val()},
+				success : function(res) {
+					console.log(res);
+					if(res=="notexist") {
+						isIdCheck = true;
+						console.log("isIdCheck 값 :  " + isIdCheck);
+						alert("사용 가능합니다.");
+					} else {
+						alert("아이디가 중복됩니다.");
+					}
+				},
+				error : function(err) {
+					console.log(err);
+					alert("아이디 중복체크 오류");
+				}
+			})
+		})
+		
+		$("#id").change(function() {
+			isIdCheck = false;
+		})
+		
+		$("#form").submit(function(e) {
+			if(isIdCheck==false) {
+				alert("아이디 중복체크를 하세요.");
+				e.preventDefault();		
+			}
+		})
+	})
+</script>
 </head>
 <body>
 <center>
@@ -51,15 +89,16 @@
             <form id='form' action="join" method="post">
                 <div class="row">
                     <div class="title">아이디</div>
-                    <div class="input"><input type="text" name="id"></div>
+                    <div class="input"><input type="text" name="id" id="id" required="required"></div>
+                    <div><input type="button" id="idcheck" value="중복"></div>                    
                 </div>
                 <div class="row">
                     <div class="title">이름</div>
-                    <div class="input"><input type="text" name="name"></div>
+                    <div class="input"><input type="text" name="name" required="required"></div>
                 </div>
                 <div class="row">
                     <div class="title">비밀번호</div>
-                    <div class="input"><input type="password" name="password"></div>
+                    <div class="input"><input type="password" name="password" required="required"></div>
                 </div>
                 <div class="row">
                     <div class="title">이메일</div>

@@ -12,6 +12,7 @@ public class Board {
 	private String fileurl;
 	private String writer;
 	private Integer viewcount;
+	private Integer likecount;
 
 	// 생성자
 	public Board() {
@@ -83,4 +84,12 @@ public class Board {
 		this.viewcount = viewcount;
 	}
 
+	public Integer getLikecount() {
+		return likecount;
+	}
+
+	public void setLikecount(Integer likecount) {
+		this.likecount = likecount;
+	}
+	
 }

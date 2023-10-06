@@ -27,7 +27,8 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="service.MemberService"/>
     <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
-    <fullyQualifiedTypeName name="dto.Member"/>
     <fullyQualifiedTypeName name="util.MybatisSqlSessionFactory"/>
     <fullyQualifiedTypeName name="service.BoardService"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="dto.Member"/>
 </qualifiedTypeNameHistroy>

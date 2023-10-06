@@ -21,4 +21,70 @@
 			select count(num) from board
 		]]>
 	</select>
+	
+	<select id="selectBoard" parameterType="Integer" resultType="Board">
+		<![CDATA[
+			select * from board where num=#{num}
+		]]>
+	</select>
+	
+	<update id="updateBoard" parameterType="Board">
+		update board
+		<!--
+		trim 문에 들어가기 이전에 SET을 주며,
+		마지막에 들어가는 ,는 제거	 
+		 -->
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="subject != null">subject=#{subject},</if>
+			<if test="content != null">content=#{content},</if>
+			<if test="fileurl != null">fileurl=#{fileurl},</if>
+		</trim>
+		where num=#{num}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="Integer">
+		<![CDATA[
+			delete from board where num=#{num}
+		]]>
+	</delete>
+	
+	<!-- 
+		#{}: 중괄호 사이의 문자열에 자동으로 따옴표를 씌워줌
+		${}: 중괄호 사이의 문자열이 그냥 넘어감 (문자열 그 자체)
+	 -->
+	<select id="searchBoardList" parameterType="hashmap" resultType="Board">
+		select * from board
+		where ${type} like '%${keyword}%' order by num desc
+		limit #{row}, 10
+	</select>
+	
+	<select id="selectBoardLikeCount" parameterType="Integer" resultType="Integer">
+		<![CDATA[
+			select likecount from board where num=#{num}
+		]]>
+	</select>
+	
+	<update id="plusBoardLikeCount" parameterType="Integer">
+		<![CDATA[
+			update board set likecount=likecount+1 where num=#{num}
+		]]>
+	</update>
+	
+	<update id="minusBoardLikeCount" parameterType="Integer">
+		<![CDATA[
+			update board set likecount=likecount-1 where num=#{num}
+		]]>
+	</update>
+	
+	<select id="searchBoardCount" parameterType="hashmap" resultType="Integer">
+		select count(*) from board
+		where ${type} like '%${keyword}%'
+	</select>
+	
+	<update id="updateBoardViewCount" parameterType="Integer">
+		<![CDATA[
+			update board set viewcount=viewcount+1 where num=#{num}
+		]]>
+	</update>
+	
 </mapper>

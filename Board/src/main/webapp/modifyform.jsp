@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시판 글 수정</title>
+<title>게시판 글 수정</title>
 <style type="text/css">
 h2 {
 	text-align: center;
@@ -30,34 +30,37 @@ table {
 <body>
 	<section id="./writeForm">
 		<h2>게시판 글 수정</h2>
-		<form action="/boardmoify" method="post">
-		<input type="hidden" name="num" value=""/>
+		<form action="boardmodify" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="num" value="${board.num}"/>
 			<table>
 				<tr>
 					<td class="td_left"><label for="writer">글쓴이</label></td>
 					<td class="td_right"><input type="text" name="writer"
-						id="writer" readonly="readonly" value=""/></td>
+						id="writer" readonly="readonly" value="${board.writer}"/></td>
 				</tr>
 				<tr>
 					<td class="td_left"><label for="subject">제목</label></td>
 					<td class="td_right"><input name="subject" type="text"
-						id="subject" value=""/></td>
+						id="subject" value="${board.subject}"/></td>
 				</tr>
 				<tr>
 					<td class="td_left"><label for="content">내용</label></td>
 					<td><textarea id="content" name="content"
-							cols="40" rows="15" ></textarea></td>
+							cols="40" rows="15" >${board.content}</textarea></td>
+				</tr>
+				<tr>
+					<td class="td_left"><label for="file">이미지 파일 첨부</label></td>
+					<td class="td_right">
+						<input name="file" type="file" id="file"accept="image/*" />
+
+					</td>
+					<%-- 3. 파일 선택할때 이미지파일만 선택가능하게함 accept="image/*" --%>
 				</tr>
 
-				<tr>
-					<td class="td_left"><label for="content">이미지</label></td>
-					<td><img src="/image/" width="100px" height="100px"/></td>
-				</tr>
-			
 			</table>
 			<section id="commandCell">
 				<input type="submit" value="수정">&nbsp;&nbsp;
-				<a href="/boardlist">목록</a>
+				<a href="boardlist">목록</a>
 			</section>
 		</form>
 	</section>

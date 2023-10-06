@@ -49,7 +49,7 @@ public class BoardList extends HttpServlet {
 			request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
 		
-		request.getRequestDispatcher("boardlist.jsp").forward(request, response);
+		// request.getRequestDispatcher("boardlist.jsp").forward(request, response);
 	}
 
 }

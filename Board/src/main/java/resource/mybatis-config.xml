@@ -6,6 +6,7 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="dto.Board" alias="Board"/>
+<!-- 		<typeAlias type="dto.Board" alias="BoardLike"/> -->
 		<typeAlias type="dto.Member" alias="Member"/>
 	</typeAliases>
 	
@@ -13,21 +14,24 @@
 		<environment id="development">
 			<transactionManager type="JDBC"/>
 			
-<!-- 			<dataSource type="POOLED">
+			<dataSource type="POOLED">
 				<property name="driver" value="org.mariadb.jdbc.Driver"/>
 				<property name="url" value="jdbc:mariadb://localhost:3306/testdb"/>
 				<property name="username" value="root"/>
 				<property name="password" value="1234"/>
-			</dataSource> -->
+			</dataSource>
 			
+			<!-- 			
 			<dataSource type="JNDI">
 				<property name="data_source" value="java:comp/env/jdbc/kosta"/>
 			</dataSource>
+			-->
 		</environment>
 	</environments>
 	
 	<mappers>
 		<mapper resource="mapper/Board.xml"/>
+		<mapper resource="mapper/BoardLike.xml"/>
 		<mapper resource="mapper/Member.xml"/>
 	</mappers>
 </configuration>

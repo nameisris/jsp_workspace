@@ -25,4 +25,11 @@ public class MemberServiceImpl implements MemberService {
 		if(smember!=null) throw new Exception("아이디 중복 오류"); // 특정 아이디로 조회되는 member가 있을 경우
 		memberDao.insertMember(member);
 	}
+	
+	@Override
+	public String idCheck(String id) throws Exception {
+		Member member = memberDao.selectMember(id);
+		if(member==null) return "notexist";
+		return "exist";
+	}
 }
