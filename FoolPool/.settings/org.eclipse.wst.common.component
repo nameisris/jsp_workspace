@@ -2,7 +2,7 @@
     <wb-module deploy-name="FoolPool">
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <property name="java-output-path" value="/FoolPool/build/classes"/>
-        <property name="context-root" value="foolpool"/>
+        <property name="java-output-path" value="/FoolPool/bin"/>
+        <property name="context-root" value="FoolPool"/>
     </wb-module>
 </project-modules>

@@ -26,7 +26,8 @@ public class Poolentarier extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("poolentarier.jsp").forward(request, response);
+		request.setCharacterEncoding("utf-8");
+		request.getRequestDispatcher("WEB-INF/views/poolentarier/poolentarier.jsp").forward(request, response);
 	}
 
 	/**

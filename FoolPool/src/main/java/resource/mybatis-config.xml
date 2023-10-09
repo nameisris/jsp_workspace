@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
-	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-	"http://mybatis.org/dtd/mybatis-3-config.dtd">
-	
+   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
 	<typeAliases>
-		<typeAlias type="bean.Account" alias="Account"/>
-		<typeAlias type="bean.Member" alias="Member"/>
+		<!-- 특정 파일에 대한 임포트 역할 -->
+		<typeAlias type="bean.Flower" alias="Flower" />
 	</typeAliases>
-	
+
 	<environments default="development">
 		<environment id="development">
-			<transactionManager type="JDBC"/>
-			
-			<dataSource type="POOLED">
-				<property name="driver" value="org.mariadb.jdbc.Driver"/>
-				<property name="url" value="jdbc:mariadb://localhost:3306/testdb"/>
-				<property name="username" value="root"/>
-				<property name="password" value="1234"/>
-			</dataSource>
-			
-			<!-- 		
+			<transactionManager type="JDBC" />
 			<dataSource type="JNDI">
-				<property name="data_source" value="java:comp/env/jdbc/kosta"/>
+				<property name="data_source"
+					value="java:comp/env/jdbc/foolpool" />
 			</dataSource>
-			-->
 		</environment>
 	</environments>
-	
+
 	<mappers>
-		<mapper resource="mapper/Account.xml"/>
-		<mapper resource="mapper/Member.xml"/>
+		<mapper resource="mapper/Flower.xml" />
 	</mappers>
 </configuration>

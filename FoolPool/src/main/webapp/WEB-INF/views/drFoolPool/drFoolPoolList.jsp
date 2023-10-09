@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% pageContext.include("header.jsp"); %>
+<div>1001 18:16 test</div>
 </body>
 </html>

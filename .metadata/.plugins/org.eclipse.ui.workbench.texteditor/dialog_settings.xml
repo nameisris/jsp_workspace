@@ -6,21 +6,32 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="page"/>
+		<item key="selection" value="foolPool"/>
 		<list key="findhistory">
-			<item value="page"/>
-			<item value="acocunt"/>
-			<item value="Response code: 200"/>
-			<item value="^\R"/>
+			<item value="foolpool"/>
+			<item value="data"/>
+			<item value="nickname"/>
+			<item value="nick"/>
+			<item value="option"/>
+			<item value="btn"/>
+			<item value="keyword"/>
+			<item value="searchform"/>
+			<item value="query"/>
+			<item value="logo"/>
+			<item value="menubox"/>
+			<item value="menubaritem"/>
+			<item value="item"/>
+			<item value="bottom"/>
+			<item value="top"/>
 		</list>
 		<list key="replacehistory">
-			<item value="\\s"/>
 			<item value=""/>
+			<item value="\\s"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1355"/>
-		<item key="DIALOG_Y_ORIGIN" value="274"/>
+		<item key="DIALOG_X_ORIGIN" value="769"/>
+		<item key="DIALOG_Y_ORIGIN" value="302"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
