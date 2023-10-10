@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="Option"/>
 		<list key="findhistory">
+			<item value="sortContent"/>
+			<item value="Option"/>
+			<item value="sortnew"/>
 			<item value="제주"/>
 			<item value="제"/>
 			<item value="resmap"/>
@@ -20,9 +23,6 @@
 			<item value="foolpool"/>
 			<item value="data"/>
 			<item value="nickname"/>
-			<item value="nick"/>
-			<item value="option"/>
-			<item value="btn"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

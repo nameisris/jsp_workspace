@@ -1,25 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/include/menubar.jsp" %>
-<%-- <% pageContext.setAttribute("poolentariers", new Poolentarier()); %> --%>
 			
-			<div class="poolentarierListLabel">풀랜테리어</div>
-			<div class="poolentarierListDicLine">
-            	<div class="poolentarierListTopBorder"></div>
-				<div class="sortBox">
-					<div class="sortNewDiv option" onclick="">
-						<div class="btn">최신순</div>
+			<div class="plLabel">풀랜테리어</div>
+			<div class="plDicLine">
+            	<div class="plTopBorder"></div>
+				<div class="plSortBox">
+					<div class="plSortNewDiv plOption" onclick="">
+						<div class="plBtn">최신순</div>
 					</div>
-					<div class="sortViewDiv option" onclick="">
-						<div class="btn">조회순</div>
+					<div class="plSortViewDiv plOption" onclick="">
+						<div class="plBtn">조회순</div>
 					</div>
 				</div>
 				
-				<div class="boardCardsection">
-					<div class="boardCardsection_line">
-						<div class="boardCard">
-							<img class="face front" src="static/img/flower.jpeg">
-							<div class="face back">
+				<div class="plBoardCardsection">
+					<div class="plBoardCardsection_line">
+						<div class="plBoardCard">
+							<img class="plFace plFront" src="static/img/flower.jpeg">
+							<div class="plFace plBack">
 								<h1>제목</h1>
 								<br>
 								<h3>식물 이름</h3>
@@ -27,9 +26,9 @@
 							</div>
 						</div>
 			
-						<div class="boardCard">
-							<img class="face front" src="static/img/flower.jpeg">
-							<div class="face back">
+						<div class="plBoardCard">
+							<img class="plFace plFront" src="static/img/flower.jpeg">
+							<div class="plFace plBack">
 								<h1>제목</h1>
 								<br>
 								<h3>식물 이름</h3>
@@ -39,11 +38,11 @@
 					</div>
 				</div>
 			
-				<div class="boardCardsection">
-					<div class="boardCardsection_line">
-						<div class="boardCard">
-							<img class="face front" src="static/img/flower.jpeg">
-							<div class="face back">
+				<div class="plBoardCardsection">
+					<div class="plBoardCardsection_line">
+						<div class="plBoardCard">
+							<img class="plFace plFront" src="static/img/flower.jpeg">
+							<div class="plFace plBack">
 								<h1>제목</h1>
 								<br>
 								<h3>식물 이름</h3>
@@ -51,9 +50,9 @@
 							</div>
 						</div>
 			
-						<div class="boardCard">
-							<img class="face front" src="static/img/flower.jpeg">
-							<div class="face back">
+						<div class="plBoardCard">
+							<img class="plFace plFront" src="static/img/flower.jpeg">
+							<div class="plFace plBack">
 								<h1>제목</h1>
 								<br>
 								<h3>식물 이름</h3>
@@ -64,13 +63,13 @@
 				</div>
 				
 				<%-- 페이징 영역--%>
-				<div id="emptyArea">
+				<div id="plPagingArea">
 					<c:choose>
 						<c:when test="${res.pageInfo.curPage>1 }">
-							<a href="boardlist?page=${res.pageInfo.curPage-1} class="btn"">&lt;</a>
+							<a href="boardlist?page=${res.pageInfo.curPage-1}" class="plBtn">&lt;</a>
 						</c:when>
 						<c:otherwise>
-			               <a class="btn">&lt;</a>
+			               <a class="plBtn">&lt;</a>
 			            </c:otherwise>
 					</c:choose>
 			
@@ -80,17 +79,17 @@
 						<c:choose>
 							<c:when test="${res.pageInfo.curPage==i}">
 								<%-- callBtn에 대한 return 처리를 callBtn에서 하지 않고, 호출한 이곳에서 return --%>
-								<a href="boardlist?page=${i}" class="select" onclick="callBtn(${i});return ${res.keyword==null};">${i}</a>&nbsp;
+								<a href="boardlist?page=${i}" class="plSelect" onclick="plCallBtn(${i});return ${res.keyword==null};">${i}</a>&nbsp;
 				         	</c:when>
 							<c:otherwise>
-								<a href="boardlist?page=${i}" class="btn" onclick="callBtn(${i});return ${res.keyword==null};">${i}</a>&nbsp;
+								<a href="boardlist?page=${i}" class="plBtn" onclick="plCallBtn(${i});return ${res.keyword==null};">${i}</a>&nbsp;
 				         	</c:otherwise>
 						</c:choose>
 					</c:forEach>
 
 					<c:choose>
 						<c:when test="${res.pageInfo.curPage<res.pageInfo.allPage }">
-							<a href="boardlist?page=${res.pageInfo.curPage+1}" class="btn">&gt;</a>
+							<a href="boardlist?page=${res.pageInfo.curPage+1}" class="plBtn">&gt;</a>
 						</c:when>
 						<c:otherwise>
 			               <a class="btn">&gt;</a>
@@ -98,11 +97,11 @@
 					</c:choose>
 				</div>
 				
-				<div class=searchPoolentarierOptionDiv>
-					<form action="./boardsearch" method="post" id="searchform">
-						<input type="hidden" name="page" id="page" value="1">
+				<div class=plSearchOptionDiv>
+					<form action="./boardsearch" method="post" id="plSearchform">
+						<input type="hidden" name="page" id="plPage" value="1">
 						<h5>
-							<select class="searchPoolentarierType" name="type">
+							<select class="plSearchType" name="type">
 								<option value="all">전체</option>
 								<option value="subjectcontent" ${res.type eq 'subjectcontent'? 'selected':''}>제목+내용</option>
 								<option value="writer" ${res.type eq 'writer'? 'selected':''}>작성자</option>
@@ -110,14 +109,14 @@
 								<option value="plant" ${res.type eq 'plant'? 'selected':''}>식물명</option>
 							</select>
 							<input type="text" name="keyword" id="keyword" value="${res.keyword}" />
-							<button class="searchBtn" type="submit">검색</button>
+							<button class="plSearchBtn" type="submit">검색</button>
 						</h5>
 					</form>
-					<div class="writeFormDiv option" onclick="">
-						<div class="btn">글쓰기</div>
+					<div class="plWriteFormDiv plOption" onclick="">
+						<div class="plBtn">글쓰기</div>
 					</div>
 				</div>
-				<div class="poolentarierBottomBorder"></div>
+				<div class="plBottomBorder"></div>
 			</div>
 		</div>
 	</div>
