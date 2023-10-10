@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="${path }/static/css/main.css" />
     <link rel="stylesheet" href="${path }/static/css/join.css" />
     <link rel="stylesheet" href="${path }/static/css/searchflower.css" />
-    <link rel="stylesheet" href="${path }/static/css/poolentarier.css" />
+    <link rel="stylesheet" href="${path }/static/css/poolentarierList.css" />
     <link rel="stylesheet" href="${path }/static/css/poolentarierForm.css" />
     
     

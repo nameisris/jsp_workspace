@@ -3,9 +3,9 @@
 <%@include file="/WEB-INF/views/include/menubar.jsp" %>
 <%-- <% pageContext.setAttribute("poolentariers", new Poolentarier()); %> --%>
 			
-			<div class="poolentarierLabel">풀랜테리어</div>
-			<div class="poolentarierDicLine">
-            	<div class="poolentarierTopBorder"></div>
+			<div class="poolentarierListLabel">풀랜테리어</div>
+			<div class="poolentarierListDicLine">
+            	<div class="poolentarierListTopBorder"></div>
 				<div class="sortBox">
 					<div class="sortNewDiv option" onclick="">
 						<div class="btn">최신순</div>

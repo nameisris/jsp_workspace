@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Poolentarier
  */
-@WebServlet("/poolentarier")
-public class Poolentarier extends HttpServlet {
+@WebServlet("/poolentarierList")
+public class PoolentarierList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Poolentarier() {
+    public PoolentarierList() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +27,7 @@ public class Poolentarier extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		request.getRequestDispatcher("WEB-INF/views/poolentarier/poolentarier.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/poolentarier/poolentarierList.jsp").forward(request, response);
 	}
 
 	/**
